@@ -10,7 +10,7 @@ defmodule RucksackReorganisation do
 
       value = MapSet.intersection(Enum.into(String.graphemes(first), MapSet.new), Enum.into(String.graphemes(second), MapSet.new))
       |> MapSet.to_list
-      |> List.to_string |> IO.inspect
+      |> List.to_string
       |> :binary.first
       |> get_character_value
 
